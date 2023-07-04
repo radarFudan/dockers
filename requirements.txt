@@ -1,0 +1,5 @@
+autopep8
+isort
+jupyterlab
+pipreqs
+ranger
