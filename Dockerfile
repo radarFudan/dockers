@@ -1,4 +1,7 @@
-FROM nvcr.io/nvidia/cuda:11.7.0-cudnn8-devel-ubuntu20.04
+# FROM nvcr.io/nvidia/cuda:11.4.0-cudnn8-devel-ubuntu20.04
+# FROM nvcr.io/nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
+# FROM nvcr.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
+FROM nvcr.io/nvidia/cuda:12.0.1-cudnn8-devel-ubuntu20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
