@@ -1,6 +1,5 @@
 bash-completion
 build-essential
-ca-certificates
 clang-format-11
 cmake
 curl
@@ -23,8 +22,5 @@ python3.9
 sudo
 tmux
 tree
-unzip
 vim
 wget
-zip
-zsh

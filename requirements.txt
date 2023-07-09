@@ -1,5 +1,7 @@
 autopep8
 isort
-jupyterlab
+matplotlib
+numpy
+pandas
 pipreqs
 ranger
