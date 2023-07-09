@@ -1,0 +1,12 @@
+einops==0.6.1
+flax==0.6.11
+numpy==1.23.5
+omegaconf==2.3.0
+optax==0.1.5
+pytorch_lightning==2.0.4
+PyYAML==6.0
+rich==13.4.2
+torch==2.0.1
+torchvision==0.15.2
+tqdm==4.65.0
+transformers==4.30.2

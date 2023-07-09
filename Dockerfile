@@ -20,4 +20,9 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt --upgrade
 
-# Additional install
+# Additional install jax
+COPY requirements_S5.txt .
+RUN pip3 install -r requirements_S5.txt --upgrade
+
+# JAX
+RUN pip install --upgrade "jax[cuda11_local]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
