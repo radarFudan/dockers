@@ -1,5 +1,5 @@
 # FROM nvcr.io/nvidia/cuda:11.4.0-cudnn8-devel-ubuntu20.04
-FROM nvcr.io/nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
 # FROM nvcr.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 # FROM nvcr.io/nvidia/cuda:12.0.1-cudnn8-devel-ubuntu20.04
 
@@ -20,9 +20,15 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt --upgrade
 
-# Additional install jax
+# Additional install
 COPY requirements_S5.txt .
 RUN pip3 install -r requirements_S5.txt --upgrade
 
 # JAX
 RUN pip install --upgrade "jax[cuda11_local]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+
+# cudnn from 8.5 to 8.9
+RUN pip install nvidia-cudnn-cu11==8.9.2.26 wandb tensorflow==2.12.0 datasets
+
+# Job script
+COPY run_S5.sh .
