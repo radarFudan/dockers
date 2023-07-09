@@ -10,6 +10,7 @@ COPY apt_install.txt .
 RUN apt-get update && apt-get install -y --no-install-recommends `cat apt_install.txt` && rm -rf /var/lib/apt/lists/*
 
 # Config pip
+RUN ln -sf /usr/bin/python3.9 /usr/bin/python3
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 # Upgrade pip, install py libs
