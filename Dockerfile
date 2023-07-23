@@ -28,7 +28,7 @@ RUN pip3 install -r requirements_S5.txt --upgrade
 RUN pip install --upgrade "jax[cuda11_local]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
 # cudnn from 8.5 to 8.9
-RUN pip install nvidia-cudnn-cu11==8.9.2.26 wandb tensorflow==2.12.0 datasets
+RUN pip install nvidia-cudnn-cu11==8.9.2.26
 
 # Job script
 COPY run_S5.sh .
